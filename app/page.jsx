@@ -4,6 +4,7 @@ import Main from "./components/Main"
 import Hightlights from './components/Hightlights'
 import Navbar from './components/Navbar'
 
+
 export default function Home() {
   return (
     <body>

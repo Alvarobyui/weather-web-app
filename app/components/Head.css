@@ -1,0 +1,111 @@
+#head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: #1E213A;
+  height: 818px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 34px;
+  margin: 3vmin;
+}
+.buttons button:first-child {
+  font-size: 16px;
+  color: white;
+  background-color: #6E707A;
+  padding: 5px 15px;
+}
+
+.buttons button:last-child {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.current-location {
+  width: 16px;
+  height: 16px;
+}
+.current-location img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-box {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/sources/cloud-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1; /* Opacidad de la imagen de fondo */
+}
+
+.img-box .img {
+  height: 23vh;
+  width: 20vh;
+  
+}
+.img-box .img img {
+  width: 100%;
+  height: 100%; 
+}
+
+/*Info section*/
+.text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.temp {
+  font-size: 144px;
+  padding-top: 0;
+  margin-top: -45px;
+
+}
+#celcious{
+  font-size: 50px;
+  opacity: 0.5;
+  padding: 0;
+  margin: 0;
+}
+.descri, .date, .city {
+  opacity: 0.7;
+}
+.descri {
+  font-size: 30px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.date, .city {
+  font-size: 18px;
+}
+.city {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-top: 5px;
+
+}
