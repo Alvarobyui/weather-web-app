@@ -1,0 +1,26 @@
+#main {
+  background-color: #100E1D;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 460px; */
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cards .card {
+  height: 200px;
+  width: 120px;
+  background-color: #1E213A;;
+}
+.cards .card .img {
+  height: 80px;
+  width: 80px;
+}
+.cards .card .img img{
+  height: 100%;
+  width: 100%;
+}
