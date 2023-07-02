@@ -7,3 +7,12 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+.content {
+  background-color: #100E1D;
+  color: white;
+}
+
+.content h1 {
+  margin-left: 15px;
+}

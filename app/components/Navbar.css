@@ -5,6 +5,7 @@ nav {
   color: white;
   background-color: #1E213A;
   align-items: stretch;
+  /* position: fixed; */
 }
 nav > * {
   flex-grow: 1;
