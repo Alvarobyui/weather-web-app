@@ -19,6 +19,36 @@ export default function Hightlights() {
             <p>WSW</p>
           </div>
         </div>
+        <div className="card">
+          <p className="humidity-text">Humidity</p>
+          <p>
+            84<span className="percentage">%</span>
+          </p>
+          <div className="humidity-info">
+            <div className="humidity-bar">
+              <p>0</p>
+              <p>60</p>
+              <p>100</p>
+              <div>
+                bar here
+              </div>
+            </div>
+            <p>%</p>
+          </div>
+        </div>
+        <div className="card">
+          <p className="visibility-text">Visibility</p>
+          <p>
+            6,4<span className="u-distance">miles</span>
+          </p>
+        </div>
+        <div className="card">
+          <p className="air-pressure-text">Air Pressure</p>
+          <p>
+            998<span className="u-pressure">mb</span>
+          </p>
+        </div>
+        
       </div>
       <footer>
         <p>created by Alvaro Diaz - Funval</p>
