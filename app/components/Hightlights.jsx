@@ -9,7 +9,7 @@ export default function Hightlights() {
       <div className="cards">
         <div className="card">
           <p className="wind-text">Wind status</p>
-          <p>
+          <p className="big-num">
             7<span className="UM">mph</span>
           </p>
           <div className="wind-info">
@@ -21,31 +21,35 @@ export default function Hightlights() {
         </div>
         <div className="card">
           <p className="humidity-text">Humidity</p>
-          <p>
+          <p className="big-num">
             84<span className="percentage">%</span>
           </p>
           <div className="humidity-info">
             <div className="humidity-bar">
-              <p>0</p>
-              <p>60</p>
-              <p>100</p>
               <div>
-                bar here
+                <span>0</span>
+                <p>50</p>
+                <p>100</p>
+              </div>
+              <div id="bar">
+                <div className="bar-fill">
+
+                </div>
               </div>
             </div>
             <p>%</p>
           </div>
         </div>
-        <div className="card">
+        <div className="card short">
           <p className="visibility-text">Visibility</p>
-          <p>
-            6,4<span className="u-distance">miles</span>
+          <p className="big-num">
+            6,4<span className="u-distance"> miles</span>
           </p>
         </div>
-        <div className="card">
+        <div className="card short">
           <p className="air-pressure-text">Air Pressure</p>
-          <p>
-            998<span className="u-pressure">mb</span>
+          <p className="big-num">
+            998<span className="u-pressure"> mb</span>
           </p>
         </div>
         
