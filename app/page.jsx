@@ -9,6 +9,7 @@ function Home() {
   const [description, setDescription] = useState("Shower");
   const [date, setDate] = useState("Mon, 3 jul");
   const [forecastDate, setForecastDate] = useState([]);
+  const [forecastTemp, setForecastTemp] = useState([]);
 
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const months = [
@@ -71,13 +72,14 @@ function Home() {
             Math.round(data.daily[4].temp.day),
             Math.round(data.daily[4].temp.night),
           ];
+          setForecastTemp([temDay1, temDay2, temDay3, temDay4, temDay5])
 
           function convertTime(unixTimestamp) {
             const date = new Date(unixTimestamp * 1000);
             const options = {
               weekday: "short",
-              month: "short",
               day: "numeric",
+              month: "short",
             };
             const readableDate = date.toLocaleString("en-US", options);
             return readableDate;
@@ -129,6 +131,12 @@ function Home() {
           day3={forecastDate[2]}
           day4={forecastDate[3]}
           day5={forecastDate[4]}
+
+          tempDay1 = {forecastTemp[0]}
+          tempDay2 = {forecastTemp[1]}
+          tempDay3 = {forecastTemp[2]}
+          tempDay4 = {forecastTemp[3]}
+          tempDay5 = {forecastTemp[4]}
         />
         <h1>Today&apos;s Hightlights</h1>
         <Hightlights />

@@ -20,8 +20,8 @@ export default function Main(props) {
               <img src="/sources/Sleet.png" alt="image" />
             </div>
             <div className="box">
-              <p>16<span>°C</span></p>
-              <p>11<span>°C</span></p>
+              <p>{props.tempDay1?.[0]}<span>°C</span></p>
+              <p>{props.tempDay1?.[1]}<span>°C</span></p>
             </div>
           </div>
           <div className="card">
@@ -30,8 +30,8 @@ export default function Main(props) {
               <img src="/sources/Sleet.png" alt="image" />
             </div>
             <div className="box">
-              <p>16<span>°C</span></p>
-              <p>11<span>°C</span></p>
+              <p>{props.tempDay2?.[0]}<span>°C</span></p>
+              <p>{props.tempDay2?.[1]}<span>°C</span></p>
             </div>
           </div>
           <div className="card">
@@ -40,8 +40,8 @@ export default function Main(props) {
               <img src="/sources/Sleet.png" alt="image" />
             </div>
             <div className="box">
-              <p>16<span>°C</span></p>
-              <p>11<span>°C</span></p>
+              <p>{props.tempDay3?.[0]}<span>°C</span></p>
+              <p>{props.tempDay3?.[1]}<span>°C</span></p>
             </div>
           </div>
           <div className="card">
@@ -50,8 +50,8 @@ export default function Main(props) {
               <img src="/sources/Sleet.png" alt="image" />
             </div>
             <div className="box">
-              <p>16<span>°C</span></p>
-              <p>11<span>°C</span></p>
+              <p>{props.tempDay4?.[0]}<span>°C</span></p>
+              <p>{props.tempDay4?.[1]}<span>°C</span></p>
             </div>
           </div>
           <div className="card">
@@ -60,8 +60,8 @@ export default function Main(props) {
               <img src="/sources/Sleet.png" alt="image" />
             </div>
             <div className="box">
-              <p>16<span>°C</span></p>
-              <p>11<span>°C</span></p>
+              <p>{props.tempDay5?.[0]}<span>°C</span></p>
+              <p>{props.tempDay5?.[1]}<span>°C</span></p>
             </div>
           </div>
         </div>
