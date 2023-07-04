@@ -5,11 +5,11 @@ import Main from "./components/Main";
 import Hightlights from "./components/Hightlights";
 
 function Home() {
-  const [temperature, setTemperature] = useState(null);
-  const [description, setDescription] = useState("Shower");
-  const [date, setDate] = useState("Mon, 3 jul");
-  const [forecastDate, setForecastDate] = useState([]);
-  const [forecastTemp, setForecastTemp] = useState([]);
+  const [temperature, setTemperature] = useState(null); // mostrar temperatura actual
+  const [description, setDescription] = useState("Shower"); //mostrar descripcion del dia
+  const [date, setDate] = useState("Mon, 3 jul"); //mostrar fecha actual
+  const [forecastDate, setForecastDate] = useState([]); //mostrar fecha en cada card de Main
+  const [forecastTemp, setForecastTemp] = useState([]); //mostrar temperatura de dia y noche de cada card de Main
 
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const months = [
@@ -74,7 +74,7 @@ function Home() {
           ];
           setForecastTemp([temDay1, temDay2, temDay3, temDay4, temDay5])
 
-          function convertTime(unixTimestamp) {
+          function convertTime(unixTimestamp) { //convertir de Unix time stamp a formato reducido en inglés
             const date = new Date(unixTimestamp * 1000);
             const options = {
               weekday: "short",
