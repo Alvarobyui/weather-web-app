@@ -5,7 +5,8 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 import "./Navbar.css";
 
-export default function Head() {
+
+export default function Head(props) {
   const [navbar, setNavbar] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -73,7 +74,7 @@ export default function Head() {
         </div>
         <div className="text">
           <h1 className="temp">
-            15<span id="celcious">°C</span>
+            {props.temp}<span id="celcious">°C</span>
           </h1>
           <h2 className="descri">Shower</h2>
           <div className="date">Today - Fri 5 Jun</div>
