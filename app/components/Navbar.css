@@ -67,3 +67,28 @@ nav > * {
 .p-box > img {
   height: 40px;
 }
+
+@media screen and (min-width: 50rem) {
+  nav {
+    width: 100%;
+  }
+  nav > * {
+    flex-grow: 0;
+  }
+  
+}
+
+
+@media screen and (min-width: 65rem) {
+  nav {
+    width: 60vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    min-width: 500px;
+    padding: 10px 40px;
+  }
+
+}

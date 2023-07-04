@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <body>
+    <>
       <div className="container">
         <Head />
         <div className="content">
@@ -15,6 +15,6 @@ export default function Home() {
           <Hightlights />
         </div>
       </div>
-    </body>
+    </>
   );
 }

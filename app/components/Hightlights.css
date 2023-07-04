@@ -75,3 +75,44 @@ footer {
   background-color: #FFEC65;
   border-radius: 5px;
 }
+
+
+@media screen and (min-width: 50rem) {
+  #hight .cards {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    height: 70vh;
+    margin-top: 20px;
+  }
+  footer {
+    margin-top: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 67rem) {
+  #hight .cards {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0;
+    height: 65%;
+    margin-top: 0;
+    margin-left: 3rem;
+  }
+  footer {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hight {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
