@@ -76,8 +76,8 @@ export default function Head(props) {
           <h1 className="temp">
             {props.temp}<span id="celcious">°C</span>
           </h1>
-          <h2 className="descri">Shower</h2>
-          <div className="date">Today - Fri 5 Jun</div>
+          <h2 className="descri">{props.des}</h2>
+          <div className="date">Today - {props.date[0]} {props.date[1]} {props.date[2]}</div>
           <div className="city">
             <span>
               <svg
@@ -88,11 +88,10 @@ export default function Head(props) {
                 className="bi bi-geo-alt-fill"
                 viewBox="0 0 16 16"
               >
-                {" "}
                 <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
               </svg>
             </span>
-            <p className="city-text"> Helsinki</p>
+            <p className="city-text">Lima</p>
           </div>
         </div>
       </div>

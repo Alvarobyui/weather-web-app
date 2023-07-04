@@ -2,7 +2,7 @@
 import React from 'react'
 import "./Main.css"
 
-export default function Main() {
+export default function Main(props) {
   return (
     <div id="main">
         <div className="UIM">
@@ -15,7 +15,7 @@ export default function Main() {
         </div>
         <div className="cards">
           <div className="card">
-            <p>Tomorrow</p>
+            <p>{props.tomorrow[0]}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -25,7 +25,7 @@ export default function Main() {
             </div>
           </div>
           <div className="card">
-            <p>Tomorrow</p>
+            <p>{props.day2?.[0]} {props.day2?.[1]} {props.day2?.[2]}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -35,7 +35,7 @@ export default function Main() {
             </div>
           </div>
           <div className="card">
-            <p>Tomorrow</p>
+            <p>{props.day3?.[0]} {props.day3?.[1]} {props.day3?.[2]}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -45,7 +45,7 @@ export default function Main() {
             </div>
           </div>
           <div className="card">
-            <p>Tomorrow</p>
+          <p>{props.day4?.[0]} {props.day4?.[1]} {props.day4?.[2]}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -55,7 +55,7 @@ export default function Main() {
             </div>
           </div>
           <div className="card">
-            <p>Tomorrow</p>
+          <p>{props.day5?.[0]} {props.day5?.[1]} {props.day5?.[2]}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
