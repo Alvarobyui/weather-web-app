@@ -37,7 +37,11 @@ body {
 
 @media screen and (min-width: 1200px) {
   .content {
-    min-width: 1300px;
+    max-width: 1440px;
     padding: 10px 100px 0 50px;
+  }
+  .content h1 {
+    margin-left: 75px;
+    font-size: 1.5rem;
   }
 }

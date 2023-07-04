@@ -68,9 +68,10 @@ nav > * {
   height: 40px;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 45rem) {
   nav {
-    width: 100%;
+    min-width: 40%;
+   /*  width: 100%; */
   }
   nav > * {
     flex-grow: 0;
