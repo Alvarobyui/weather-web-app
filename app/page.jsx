@@ -25,6 +25,10 @@ function Home() {
     "Nov",
     "Dec",
   ];
+  useEffect(() => {
+    getData();
+    getDate();
+  }, []);
 
   function getData() {
     navigator.geolocation.getCurrentPosition((success) => {
@@ -38,6 +42,60 @@ function Home() {
           console.log(data);
           setTemperature(Math.round(data.current.temp));
           setDescription(data.current.weather[0].description);
+
+          /* Obteniendo la fecha de los próximos 5 dias*/
+          let day1 = "Tomorrow";
+          let day2 = data.daily[2].dt;
+          let day3 = data.daily[3].dt;
+          let day4 = data.daily[4].dt;
+          let day5 = data.daily[5].dt;
+
+          /*obteniendo la temperatura de los próximos 5 dias*/
+          let temDay1 = [
+            Math.round(data.daily[0].temp.day),
+            Math.round(data.daily[0].temp.night),
+          ];
+          let temDay2 = [
+            Math.round(data.daily[1].temp.day),
+            Math.round(data.daily[1].temp.night),
+          ];
+          let temDay3 = [
+            Math.round(data.daily[2].temp.day),
+            Math.round(data.daily[2].temp.night),
+          ];
+          let temDay4 = [
+            Math.round(data.daily[3].temp.day),
+            Math.round(data.daily[3].temp.night),
+          ];
+          let temDay5 = [
+            Math.round(data.daily[4].temp.day),
+            Math.round(data.daily[4].temp.night),
+          ];
+
+          function convertTime(unixTimestamp) {
+            const date = new Date(unixTimestamp * 1000);
+            const options = {
+              weekday: "short",
+              month: "short",
+              day: "numeric",
+            };
+            const readableDate = date.toLocaleString("en-US", options);
+            return readableDate;
+          }
+
+          const readableDay2 = convertTime(day2);
+          const readableDay3 = convertTime(day3);
+          const readableDay4 = convertTime(day4);
+          const readableDay5 = convertTime(day5);
+          console.log(day2);
+          setForecastDate([
+            day1,
+            readableDay2,
+            readableDay3,
+            readableDay4,
+            readableDay5,
+          ]);
+          console.log(forecastDate);
         });
     });
   }
@@ -54,31 +112,19 @@ function Home() {
  */
     let dateArray = [days[day], dayNum, months[month]];
     setDate(dateArray);
-
-    let tomorrow = ["Tomorrow"];
-    let day2 = [days[day + 2], dayNum + 2, months[month]];
+    /* let day2 = [days[day + 2], dayNum + 2, months[month]];
     let day3 = [days[day + 3], dayNum + 3, months[month]];
     let day4 = [days[day + 4], dayNum + 4, months[month]];
     let day5 = [days[day + 0], dayNum + 5, months[month]];
-    setForecastDate([tomorrow, day2, day3, day4, day5]);
+    setForecastDate([tomorrow, day2, day3, day4, day5]); */
   }
-
-  useEffect(() => {
-    getData();
-    getDate();
-  }, []);
-
-  /*  function getForecast() {
-   return forecastDay1 = [forecastDate[0], forecastInfo[0]];
-  } */
-  console.log(forecastDate);
 
   return (
     <div className="container">
       <Head temp={temperature} des={description} date={date} />
       <div className="content">
         <Main
-          tomorrow={forecastDate}
+          tomorrow={forecastDate[0]}
           day2={forecastDate[1]}
           day3={forecastDate[2]}
           day4={forecastDate[3]}

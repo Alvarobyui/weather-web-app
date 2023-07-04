@@ -15,7 +15,7 @@ export default function Main(props) {
         </div>
         <div className="cards">
           <div className="card">
-            <p>{props.tomorrow[0]}</p>
+            <p>{props?.tomorrow}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -25,7 +25,7 @@ export default function Main(props) {
             </div>
           </div>
           <div className="card">
-            <p>{props.day2?.[0]} {props.day2?.[1]} {props.day2?.[2]}</p>
+            <p>{props?.day2}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -35,7 +35,7 @@ export default function Main(props) {
             </div>
           </div>
           <div className="card">
-            <p>{props.day3?.[0]} {props.day3?.[1]} {props.day3?.[2]}</p>
+            <p>{props?.day3}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -45,7 +45,7 @@ export default function Main(props) {
             </div>
           </div>
           <div className="card">
-          <p>{props.day4?.[0]} {props.day4?.[1]} {props.day4?.[2]}</p>
+          <p>{props?.day4}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
@@ -55,7 +55,7 @@ export default function Main(props) {
             </div>
           </div>
           <div className="card">
-          <p>{props.day5?.[0]} {props.day5?.[1]} {props.day5?.[2]}</p>
+          <p>{props?.day5}</p>
             <div className="img">
               <img src="/sources/Sleet.png" alt="image" />
             </div>
