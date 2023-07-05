@@ -1,15 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useState } from 'react'
 import "./Main.css"
 
+
 export default function Main(props) {
+  const [unit, setUnit] = useState(false);
+function handleToFahren() {
+  setUnit(true);
+  props.onData(unit);
+  console.log(unit);
+}
+function handleToCelcious() {
+  setUnit(false);
+  props.onData();
+  console.log(unit);
+}
+
+
   return (
     <div id="main">
         <div className="UIM">
-          <div className="celcious">
+          <div className="celcious" onClick={handleToCelcious}>
             °C
           </div>
-          <div className="fahren">
+          <div className="fahren" onClick={handleToFahren}>
             °F
           </div>
         </div>
@@ -17,7 +31,7 @@ export default function Main(props) {
           <div className="card">
             <p>{props?.tomorrow}</p>
             <div className="img">
-              <img src="/sources/Sleet.png" alt="image" />
+              <img src="/sources/shower.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay1?.[0]}<span>°C</span></p>
@@ -27,7 +41,7 @@ export default function Main(props) {
           <div className="card">
             <p>{props?.day2}</p>
             <div className="img">
-              <img src="/sources/Sleet.png" alt="image" />
+              <img src="/sources/shower.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay2?.[0]}<span>°C</span></p>
@@ -37,7 +51,7 @@ export default function Main(props) {
           <div className="card">
             <p>{props?.day3}</p>
             <div className="img">
-              <img src="/sources/Sleet.png" alt="image" />
+              <img src="/sources/Thunderstorm.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay3?.[0]}<span>°C</span></p>
@@ -47,7 +61,7 @@ export default function Main(props) {
           <div className="card">
           <p>{props?.day4}</p>
             <div className="img">
-              <img src="/sources/Sleet.png" alt="image" />
+              <img src="/sources/LightCloud.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay4?.[0]}<span>°C</span></p>
@@ -57,7 +71,7 @@ export default function Main(props) {
           <div className="card">
           <p>{props?.day5}</p>
             <div className="img">
-              <img src="/sources/Sleet.png" alt="image" />
+              <img src="/sources/HeavyRain.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay5?.[0]}<span>°C</span></p>

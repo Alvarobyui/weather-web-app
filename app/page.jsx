@@ -17,10 +17,13 @@ function Home() {
   const [visibility, setVisibility] = useState("998");
   const [pressure, setPressure] = useState("998");
 
+  const [fahrenheit, setFehrenheit] = useState("metric");
+
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const months = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec",
   ];
+
   useEffect(() => {
     getData();
     getDate();
@@ -31,7 +34,7 @@ function Home() {
       const { latitude, longitude } = success.coords;
 
       fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=4f6eb20d2bbb64f3a7d904bceab37bba`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=${fahrenheit}&appid=4f6eb20d2bbb64f3a7d904bceab37bba`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -84,7 +87,6 @@ function Home() {
           const readableDay3 = convertTime(day3);
           const readableDay4 = convertTime(day4);
           const readableDay5 = convertTime(day5);
-          console.log(day2);
           setForecastDate([
             day1,
             readableDay2,
@@ -112,6 +114,18 @@ function Home() {
     setDate(dateArray);
   }
 
+  const yes = "imperial";
+  const no = "metric";
+  const changeToFahrenheit = (data)=> {
+    if (data) {
+      setFehrenheit(yes);
+      console.log(fahrenheit);
+    } else {
+      setFehrenheit(no);
+      console.log(fahrenheit)
+    }
+  }
+
   return (
     <div className="container">
       <Head temp={temperature} des={description} date={date} />
@@ -128,6 +142,8 @@ function Home() {
           tempDay3 = {forecastTemp[2]}
           tempDay4 = {forecastTemp[3]}
           tempDay5 = {forecastTemp[4]}
+
+          onData = {changeToFahrenheit}
         />
         <h1>Today&apos;s Hightlights</h1>
         <Hightlights 
