@@ -1,20 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Main.css"
 
 
 export default function Main(props) {
   const [unit, setUnit] = useState(false);
-function handleToFahren() {
+
+const handleToFahren = () => {
   setUnit(true);
-  props.onData(unit);
-  console.log(unit);
+  /* props.onData(setUnit(true)); */
 }
-function handleToCelcious() {
+const handleToCelcious = () => {
   setUnit(false);
-  props.onData();
-  console.log(unit);
+  /* props.onData(setUnit(false)); */
 }
+
+useEffect(() => {
+  console.log(unit);
+  props.onData(unit);
+}, [unit]);
 
 
   return (

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Head from "./components/Head";
 import Main from "./components/Main";
 import Hightlights from "./components/Hightlights";
@@ -24,10 +24,16 @@ function Home() {
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec",
   ];
 
+  const prevFahrenheit = useRef(fahrenheit);
+
   useEffect(() => {
     getData();
     getDate();
-  }, []);
+    if (prevFahrenheit.current !== fahrenheit) {
+      getData();
+    }
+    prevFahrenheit.current = fahrenheit;
+  }, [fahrenheit]);
 
   function getData() {
     navigator.geolocation.getCurrentPosition((success) => {
