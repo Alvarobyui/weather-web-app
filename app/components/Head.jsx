@@ -74,7 +74,7 @@ export default function Head(props) {
         </div>
         <div className="text">
           <h1 className="temp">
-            {props.temp}<span id="celcious">°C</span>
+            {props.temp}<span id="celcious">{`${props.temp > 40 ? "°F" : "°C"}`}</span>
           </h1>
           <h2 className="descri">{props.des}</h2>
           <div className="date">Today - {props.date[0]} {props.date[1]} {props.date[2]}</div>

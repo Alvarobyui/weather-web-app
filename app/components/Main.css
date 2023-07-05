@@ -57,12 +57,12 @@
 }
 
 
-.UIM :nth-child(1) {
+.UIM .active {
   background-color: #E7E7EB;
   color: #110E3C;
 }
 
-.UIM :nth-child(2) {
+.UIM .no-active {
   background-color: #585676;
   color: #E7E7EB;
 }
