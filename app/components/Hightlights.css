@@ -107,7 +107,6 @@ footer {
     flex-wrap: nowrap;
     place-items: center;
     overflow: hidden;
-    overflow-y: scroll;
     padding: 0;
     height: 65%;
     margin-top: 0;

@@ -67,6 +67,17 @@
   color: #E7E7EB;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #1E213A;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #585676;
+} 
+
 @media screen and (min-width: 50rem) {
   .UIM {
     justify-content: end;
@@ -96,6 +107,7 @@
     gap: 2rem;
     margin-left: 1.5rem;
     max-width: 100%;
+    overflow: hidden;
   }
   .cards .card {
     width: 120px;
