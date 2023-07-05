@@ -3,14 +3,14 @@ import React from "react";
 import "./Hightlights.css";
 import { BiSolidNavigation } from "react-icons/bi";
 
-export default function Hightlights() {
+export default function Hightlights(props) {
   return (
     <div id="hight">
       <div className="cards">
         <div className="card">
           <p className="wind-text">Wind status</p>
           <p className="big-num">
-            7<span className="UM">mph</span>
+            {props?.wind}<span className="UM">Km/h</span>
           </p>
           <div className="wind-info">
             <div className="wind-arrow">
@@ -22,7 +22,7 @@ export default function Hightlights() {
         <div className="card">
           <p className="humidity-text">Humidity</p>
           <p className="big-num">
-            84<span className="percentage">%</span>
+            {props?.humidity}<span className="percentage">%</span>
           </p>
           <div className="humidity-info">
             <div className="humidity-bar">
@@ -43,13 +43,13 @@ export default function Hightlights() {
         <div className="card short">
           <p className="visibility-text">Visibility</p>
           <p className="big-num">
-            6,4<span className="u-distance"> miles</span>
+            {props?.visibility}<span className="u-distance">Km</span>
           </p>
         </div>
         <div className="card short">
           <p className="air-pressure-text">Air Pressure</p>
           <p className="big-num">
-            998<span className="u-pressure"> mb</span>
+            {props?.pressure}<span className="u-pressure"> mb</span>
           </p>
         </div>
         
