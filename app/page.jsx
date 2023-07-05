@@ -29,10 +29,10 @@ function Home() {
   useEffect(() => {
     getData();
     getDate();
-    if (prevFahrenheit.current !== fahrenheit) {
+    if (prevFahrenheit.current !== fahrenheit) { //Verifica si la variable fahrenheit ah cambiado su valor.
       getData();
     }
-    prevFahrenheit.current = fahrenheit;
+    prevFahrenheit.current = fahrenheit; //actualiza el valor de prevFahrenheit y lo guarda.
   }, [fahrenheit]);
 
   function getData() {
