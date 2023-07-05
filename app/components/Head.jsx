@@ -69,7 +69,7 @@ export default function Head(props) {
         </div>
         <div className="img-box">
           <div className="img">
-            <img src="sources/shower.png" alt="main-logo" />
+            <img src="/sources/shower.png" alt="main-logo" />
           </div>
         </div>
         <div className="text">
