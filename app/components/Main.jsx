@@ -31,7 +31,7 @@ function handleToCelcious() {
           <div className="card">
             <p>{props?.tomorrow}</p>
             <div className="img">
-              <img src="/sources/shower.png" alt="image" />
+              <img src="/sources/LightRain.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay1?.[0]}<span>°C</span></p>
@@ -41,7 +41,7 @@ function handleToCelcious() {
           <div className="card">
             <p>{props?.day2}</p>
             <div className="img">
-              <img src="/sources/shower.png" alt="image" />
+              <img src="/sources/LightRain.png" alt="image" />
             </div>
             <div className="box">
               <p>{props.tempDay2?.[0]}<span>°C</span></p>
