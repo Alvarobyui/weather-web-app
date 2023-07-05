@@ -32,7 +32,7 @@ export default function Hightlights(props) {
                 <p>100</p>
               </div>
               <div id="bar">
-                <div className="bar-fill">
+                <div className="bar-fill" style={{width: `${props?.humidity}%`}}>
 
                 </div>
               </div>
